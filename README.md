@@ -1,0 +1,10 @@
+var 
+	weather
+	wet
+	drivers
+functions
+	reliability
+	ability
+	advance 
+	progress 
+	conditon	
