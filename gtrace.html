@@ -6,12 +6,10 @@
 		this.ability = ability;
 		this.reliability = reliability;
 		this.position = 0;
-
-	function Track(wet) {
-		this.wet = wet;
-		}
-		
-		var weather = prompt("Is the weather Wet or Dry?");	
+	
+	function Track(weather) {
+		this.weather = weather;
+	}
 		var wet = new Track(-4);
 
     this.isReliability = function(){
@@ -20,30 +18,33 @@
 		this.isAbility = function(){
 			return Math.floor(Math.random() * 100) +1 < this.ability;
 		};
-		this.advance = function() {
+		
+		this.progress = function() {
+			return this.name + " is at: " + this.position;
+		};
+		
+		this.weather = function() { 
+		var weather = prompt("Is the weather Wet or Dry?");	
+			switch(weather) {
+				case 'Wet?':
+					console.log("Looks like speeds will be down today...");
+					break;
+				case 'Dry?':
+					console.log("Should be nice and fast today!");
+					break;
+				default:
+					console.log("Well, what's the weather like?");	
+			}
+		};
+		if (this.weather == wet){
+			return this.speed - this.weather;
+		}else {
+			this.advance = function() {
 			if(this.isAbility()) {
 				this.position += this.speed;
 			}
 		};
-		this.progress = function() {
-			return this.name + " is at: " + this.position;
-		};
-		this.isCondition = function(){
-			if(this.isAbility()) {
-				this.speed - this.wet;
-			}
-		};
-		
-		switch(weather) {
-			case 'Wet?':
-				console.log("Looks like speeds will be down today...");
-				break;
-			case 'Dry?':
-				console.log("Should be nice and fast today!");
-				break;
-			default:
-				console.log("Well what's the weather like?");	
-		}
+		} 
 	}
 
 	var Hamilton = new Driver("Hamilton", 9, 98, 6);
@@ -71,5 +72,5 @@
 	}else {
 		alert("The Race continues...");
 	}
-</script>
 
+</script>
