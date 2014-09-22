@@ -1,0 +1,84 @@
+h1 {
+	color: #00008a;
+	text-align: center;
+	font-family: 'playball';
+}
+
+p {
+	font-family: 'quicksand';
+	text-align: center;
+}
+
+#bg { 
+	position: fixed; 
+	top: -25%;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	opacity: 0.4;
+}
+
+#bg img {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	min-width: 50%;
+	min-height: 50%;
+}
+
+li {
+	text-decoration: none;
+	display: inline;
+	margin: 45px;
+	font-size: 20px;
+	color: #00008A;
+	font-family: 'playball';
+}
+
+#hamilton {
+	border: 2px solid #000;
+	padding: 4px;
+	margin: 4px;
+	border-radius: 6px;
+	background: #666;
+	position: relative;
+	top: 50px;
+	left: 60px;
+}
+
+#rosberg {
+	border: 2px solid #000;
+	padding: 4px;
+	margin: 4px;
+	border-radius: 6px;
+	background: #666;
+	position: relative;
+	top: 50px;
+	left: 100px;
+}
+
+#bottas {
+	border: 2px solid #000;
+	padding: 4px;
+	margin: 4px;
+	border-radius: 6px;
+	background: #666;
+	position: relative;
+	top: 50px;
+	left: 140px;
+}
+
+#grosjean {
+	border: 2px solid #000;
+	padding: 4px;
+	margin: 4px;
+	border-radius: 6px;
+	background: #666;	
+	position: relative;
+	top: 50px;
+	left: 180px;
+} 
+
