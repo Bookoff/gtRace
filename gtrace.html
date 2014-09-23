@@ -24,7 +24,7 @@
 		};
 		
 		this.weather = function() { 
-		var weather = prompt("Is the weather Wet or Dry?");	
+		weather = prompt("Is the weather Wet or Dry?");	
 			switch(weather) {
 				case 'Wet?':
 					console.log("Looks like speeds will be down today...");
@@ -37,7 +37,7 @@
 			}
 		};
 		if (this.weather == wet){
-			return this.speed - this.weather;
+			return this.speed - this.weather();
 		}else {
 			this.advance = function() {
 			if(this.isAbility()) {
