@@ -43,11 +43,11 @@ li {
 	margin: 0 auto;
 	margin-top: 175px; 
 	border-radius: 6px;
-	cursor: pointer;
+	cursor: crosshair;
 	text-align: center;
 }
 
-#hamilton {
+.racer {
 	border: 2px solid #000;
 	padding: 4px;
 	margin: 4px;
@@ -56,38 +56,6 @@ li {
 	position: relative;
 	top: 50px;
 	left: 0px;
+	cursor: pointer;
 }
-
-#rosberg {
-	border: 2px solid #000;
-	padding: 4px;
-	margin: 4px;
-	border-radius: 6px;
-	background: #666;
-	position: relative;
-	top: 50px;
-	left: 0px;
-}
-
-#bottas {
-	border: 2px solid #000;
-	padding: 4px;
-	margin: 4px;
-	border-radius: 6px;
-	background: #666;
-	position: relative;
-	top: 50px;
-	left: 0px;
-}
-
-#grosjean {
-	border: 2px solid #000;
-	padding: 4px;
-	margin: 4px;
-	border-radius: 6px;
-	background: #666;	
-	position: relative;
-	top: 50px;
-	left: 0px;
-} 
 
