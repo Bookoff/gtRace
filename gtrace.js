@@ -1,15 +1,11 @@
-function go(){
+$(document).ready(function() {
+
 	function Driver(name, speed, ability, reliability) {
 		this.name = name;
 		this.speed = speed;
 		this.ability = ability;
 		this.reliability = reliability;
 		this.position = 0;
-	
-	function Track(weather) {
-		this.weather = weather;
-	}
-		var wet = new Track(-4);
 
     this.isReliability = function(){
 			return Math.floor(Math.random() * 10) + 1 < this.reliability;
@@ -17,41 +13,48 @@ function go(){
 		this.isAbility = function(){
 			return Math.floor(Math.random() * 100) +1 < this.ability;
 		};
-		
-		this.progress = function() {
-			return this.name + " is at: " + this.position;
-		};
-		
+
 		this.advance = function() {
-			if(this.isAbility()) {
+			if(this.isAbility() && this.isReliability()){
 				this.position += this.speed;
-			}
-		}; 
-	}
 
-	var Hamilton = new Driver("Hamilton", 9, 98, 6);
-	var Rosberg = new Driver("Rosberg", 9, 97, 6);
-	var Grosjean = new Driver("Grosjean", 7, 85, 4);
-	var Bottas = new Driver("Bottas", 9, 90, 8);
-	var meters = 3050;
+			$(this.name).css("left", this.position);
+			console.log(this.position);	
+		} 
+	};
 
-	while (Hamilton.position < meters && Rosberg.position < meters && Grosjean.position < meters && Bottas.position < meters) {
+	var Hamilton = new Driver("#hamilton", 9, 98, 6);
+	var Rosberg = new Driver("#rosberg", 9, 97, 6);
+	var Grosjean = new Driver("#grosjean", 7, 85, 4);
+	var Bottas = new Driver("#bottas", 9, 90, 8);
+	var meters = 305;
+	
+	$('#raceButton').click(function() {
+	if (Hamilton.position < meters && Rosberg.position < meters && Grosjean.position < meters && Bottas.position < meters); {
 		Hamilton.advance();
 		Rosberg.advance();
 		Grosjean.advance();
 		Bottas.advance();
-		console.log(Hamilton.progress() + " -- " + Rosberg.progress() + " -- " + Grosjean.progress() + "--" + Bottas.progress());
-	}
-
-	if (Hamilton.position >= meters){
-		return "Hamliton Wins! YAY!!!!!";
-	}else if (Rosberg.position >= meters){
-		return "Rosberg wins! Suck it Rosberg!!!";
-	}else if (Grosjean.position >= meters){
-		return "Are you kidding me?!!??!?!";
-	}else if (Bottas.position >= meters) {
-		return "Sweet Victory for the Finn!";
+		console.log();
 	}else {
-		return "The Race continues...";
+	
+	var winner;
+  if (Hamilton.position >= meters){
+		winner = "Hamliton Wins! YAY!!!!!";
+	}else if (Rosberg.position >= meters){
+		winner = "Rosberg wins! Suck it Rosberg!!!";
+	}else if (Grosjean.position >= meters){
+		winner = "Are you kidding me?!!??!?!";
+	}else if (Bottas.position >= meters) {
+		winner = "Sweet Victory for the Finn!";
+	}else {
+		winner = "The Race continues...";
 	} 
-};	
+	
+	
+	$('#raceButton').html("The winner is:<p>"+ winner + "!!!</p>");
+	
+			}
+		})	
+	}
+});
