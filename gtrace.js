@@ -25,10 +25,10 @@ $(document).ready(function() {
 		}
 	}
 
-	var Hamilton = new Driver("#hamilton", 9, 98, 6);
-	var Rosberg = new Driver("#rosberg", 9, 97, 6);
-	var Grosjean = new Driver("#grosjean", 7, 85, 4);
-	var Bottas = new Driver("#bottas", 9, 90, 8);
+	var Hamilton = new Driver("#hamilton", 9, 98, 7);
+	var Rosberg = new Driver("#rosberg", 9, 96, 7);
+	var Grosjean = new Driver("#grosjean", 7, 92, 4);
+	var Bottas = new Driver("#bottas", 8, 95, 8);
 	var meters = 305;
 	
 	$('#raceButton').on('click', function() {

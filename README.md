@@ -1,8 +1,2 @@
-var 
-	drivers
-functions
-	reliability
-	ability
-	advance 
-	progress 
-		
+Racer is selected before the race begins to designate the users favorite.
+User clicks race button until the winner crosses the line!
