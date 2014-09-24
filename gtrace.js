@@ -7,23 +7,23 @@ $(document).ready(function() {
 		this.reliability = reliability;
 		this.position = 0;
 
-    this.isReliability = function(){
+    this.isReliability = function() {
 			return Math.floor(Math.random() * 10) + 1 < this.reliability;
 		};
 		
-		this.isAbility = function(){
-			return Math.floor(Math.random() * 100) +1 < this.ability;
+		this.isAbility = function() {
+			return Math.floor(Math.random() * 100) + 1 < this.ability;
 		};
 
 		this.advance = function() {
-			if(this.isAbility() && this.isReliability()){
+			if(this.isAbility() && this.isReliability()) {
 				this.position += this.speed;
 
 			$(this.name).css("left", this.position);
 			console.log(this.position);	
-		} 
-	};
-
+		  }
+		}
+	}
 
 	var Hamilton = new Driver("#hamilton", 9, 98, 6);
 	var Rosberg = new Driver("#rosberg", 9, 97, 6);
@@ -37,26 +37,24 @@ $(document).ready(function() {
 			Rosberg.advance();
 			Grosjean.advance();
 			Bottas.advance();
-			console.log();
-		}else {
+		} 
 		
 		var winner;
-	  if (Hamilton.position >= meters){
+
+	  if (Hamilton.position >= meters) {
 			winner = "Hamliton Wins! YAY!!!!!";
-		}else if (Rosberg.position >= meters){
+		}else if (Rosberg.position >= meters) {
 			winner = "Rosberg wins! Suck it Rosberg!!!";
-		}else if (Grosjean.position >= meters){
+		}else if (Grosjean.position >= meters) {
 			winner = "Are you kidding me?!!??!?!";
 		}else if (Bottas.position >= meters) {
 			winner = "Sweet Victory for the Finn!";
 		}else {
-			winner = "The Race continues...";
-		} 
-	
+			winner = "The race continues!";
+		} 	 
 	
 	$('#raceButton').html("The winner is:<p>"+ winner + "!!!</p>");
+	$('#announcer').html("<h1>" + winner + "!</h1>");
 	
-			}
-		})	
-	}
+	})		
 });
